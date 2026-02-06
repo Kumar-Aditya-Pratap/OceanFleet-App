@@ -30,6 +30,6 @@ bin/
 
 ####Additional###
 .idea/
-.iml
+*.iml
 target/
-.class
+*.class
