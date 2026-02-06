@@ -8,8 +8,7 @@ public class UserInterface {
         VesselUtil vesselUtil = new VesselUtil();
         Scanner scanner = new Scanner(System.in);
 
-        // initialize predefined vessels
-        vesselUtil.getVesselList();
+
 
         System.out.println("Enter the Vessel Id to check speed");
         String vesselId = scanner.nextLine();
