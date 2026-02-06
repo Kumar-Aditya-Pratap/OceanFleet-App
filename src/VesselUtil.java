@@ -1,17 +1,22 @@
-import java.util.ArrayList;
 import java.util.List;
-
+import java.util.ArrayList;
 public class VesselUtil {
+    private List<Vessel> vesselList = new ArrayList<>();
 
-    public static List<Vessel> getVesselList() {
+    public List<Vessel> getVesselList() {
 
-        List<Vessel> vessels = new ArrayList<>();
+        vesselList.add(new Vessel("V001", "Sea King", 25.5, "Cargo"));
+        vesselList.add(new Vessel("V002", "Ocean Star", 18.0, "Tanker"));
+        vesselList.add(new Vessel("V003", "Wave Rider", 22.3, "Cruise"));
 
-        vessels.add(new Vessel("V001", "Atlantic Explorer", 28.5, "Cargo"));
-        vessels.add(new Vessel("V002", "Pacific Guardian", 32.0, "Military"));
-        vessels.add(new Vessel("V003", "Ocean Breeze", 22.8, "Passenger"));
-        vessels.add(new Vessel("V004", "Arctic Voyager", 26.4, "Research"));
-
-        return vessels;
+        return vesselList;
+    }
+    public Vessel getVesselById(String vesselId) {
+        for (Vessel vessel : vesselList) {
+            if (vessel.getVesselId().equals(vesselId)) {
+                return vessel;
+            }
+        }
+        return null;
     }
 }
